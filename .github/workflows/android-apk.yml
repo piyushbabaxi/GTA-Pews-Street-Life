@@ -49,7 +49,7 @@ jobs:
             -keyalg RSA -keysize 2048 -validity 10000
 
       - name: Import project
-        run: godot --headless --editor --path . --quit
+        run: godot --headless --editor --path . --verbose --quit
 
 
         
