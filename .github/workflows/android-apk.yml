@@ -52,7 +52,10 @@ jobs:
         run: godot --headless --editor --path . --quit
 
       - name: Install Android build template
-        run: godot --headless --editor --path . --install-android-build-template
+        timeout-minutes: 5
+        run: |
+          set -o pipefail
+          yes | godot --headless --editor --path . --install-android-build-template
 
       - name: Export Android APK
         run: |
