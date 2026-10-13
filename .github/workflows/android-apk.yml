@@ -27,7 +27,7 @@ jobs:
       - name: Configure Android SDK
         run: |
           yes | sdkmanager --licenses || true
-          sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+          sdkmanager "platform-tools" "platforms;android-33" "platforms;android-35" "build-tools;33.0.2" "build-tools;35.0.0"
 
       - name: Install Godot export templates
         run: |
